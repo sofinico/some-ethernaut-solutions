@@ -2,7 +2,6 @@
 pragma solidity ^0.8.0;
 
 contract GatekeeperOne {
-
   address public entrant;
 
   modifier gateOne() {

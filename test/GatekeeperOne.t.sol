@@ -2,6 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
+import "forge-std/console.sol";
 import "src/GatekeeperOne.sol";
 import "src/GatekeeperOneSolution.sol";
 
@@ -18,9 +19,10 @@ contract SolutionTest is Test {
     }
 
     function testSolution() public {
-        uint gas = 3*8191+268;
-        bool ans = sol.makeEntrant(GATEKEY, gas);
-        assertTrue(ans);
+        uint multiplier = 3;
+        uint ans = sol.makeEntrant(GATEKEY, multiplier);
+        console.log("Forwarded gas: %s", ans);
+        console.log("Extra gas: %s", ans-multiplier*8191);
 
         address entrant = gk.entrant();
         assertEq(entrant, DEPLOYER, "Not entrant.");
