@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@types/chai": "^4.3.14",
+    "@types/node": "^20.12.2",
+    "chai": "^5.1.0",
+    "ethers": "^6.11.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3"
+  },
+  "scripts": {
+    "test": "npx ts-node"
+  }
+}
