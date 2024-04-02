@@ -1,13 +1,15 @@
 # some ethernaut solutions
 
-test with foundry
+Minimalist workspace with foundry + ethers.
+
+Test with foundry
 
 ```zsh
 forge test -vvv
 ```
 
-test with typescript + ethers.js
+Custom "test" with typescript + ethers.js
 
 ```zsh
-npm test
+npm test <file-path>
 ```
