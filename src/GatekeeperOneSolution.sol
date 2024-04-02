@@ -4,6 +4,8 @@ pragma solidity ^0.8.0;
 contract Solution {
     address public owner;
     address public gatekeeperOne;
+    
+    event ForwardedGas(uint);
 
     modifier onlyOwner {
         require(msg.sender == owner, "Not owner");
@@ -26,6 +28,7 @@ contract Solution {
             forwardedGas++;
         }
 
+        emit ForwardedGas(forwardedGas-1);
         return forwardedGas-1;
     }
 }

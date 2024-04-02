@@ -21,8 +21,8 @@ contract SolutionTest is Test {
     function testSolution() public {
         uint multiplier = 3;
         uint ans = sol.makeEntrant(GATEKEY, multiplier);
-        console.log("Forwarded gas: %s", ans);
-        console.log("Extra gas: %s", ans-multiplier*8191);
+        console.log("Total forwarded gas to GatekeeperOne.entrant(): %s", ans);
+        console.log("Total consumed gas until gasleft(): %s", ans-multiplier*8191);
 
         address entrant = gk.entrant();
         assertEq(entrant, DEPLOYER, "Not entrant.");
