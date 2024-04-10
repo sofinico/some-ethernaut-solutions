@@ -37,13 +37,13 @@ async function getConsumedGas() {
     // transaction hash of me calling makeEntrant() on second instance (event emitted)
     const txHash = "0x4c50f2e5aa9a8afbfe7dd128ccb80543043ee6bdbd0ab98a59593bd1447b3690";
 
-    const solutionI = new ethers.Interface(solutionABI);
+    const ISolution = new ethers.Interface(solutionABI);
     
     const transactionResponse = await getTransaction(txHash) as TransactionResponse;
     // console.log(transactionResponse);
     const txData = transactionResponse.data;
     // console.log(txData);
-    const decodedData = solutionI.parseTransaction({ data: txData }) as TransactionDescription;
+    const decodedData = ISolution.parseTransaction({ data: txData }) as TransactionDescription;
     
     // console.log(`Function name: ${decodedData.name}`);
     // console.log(`Function signature: ${decodedData.signature}`);
