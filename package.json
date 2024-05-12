@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@openzeppelin/contracts": "^5.0.2",
     "@types/chai": "^4.3.14",
     "@types/node": "^20.12.2",
     "chai": "^5.1.0",

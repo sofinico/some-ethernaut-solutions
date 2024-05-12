@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: Unlicense
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.0;
 
-import "forge-std/Test.sol";
-import "forge-std/console.sol";
-import "src/GatekeeperOne.sol";
-import "src/GatekeeperOneSolution.sol";
+import {Test, console} from "forge-std/Test.sol";
+import {GatekeeperOne} from "../src/GatekeeperOne.sol";
+import {Exploit} from "../src/GatekeeperOneExploit.sol";
 
 address constant DEPLOYER = 0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38;
 bytes8 constant GATEKEY = 0x0023caca00001f38;

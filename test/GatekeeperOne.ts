@@ -1,5 +1,5 @@
 import { TransactionDescription, TransactionReceipt, TransactionResponse, ethers } from "ethers";
-import solutionABI from "../abi/GatekeeperOneSolution.json";
+import solutionABI from "./utils/GatekeeperOneExploitABI.json";
 
 const provider = new ethers.JsonRpcProvider("https://rpc.sepolia.org");
 
