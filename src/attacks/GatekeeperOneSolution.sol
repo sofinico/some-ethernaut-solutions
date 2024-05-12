@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-contract Exploit {
+contract Solution {
     address public owner;
     address public gatekeeperOne;
     
