@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import {Test, console} from "@forge-std/Test.sol";
+import "forge-std/Test.sol";
+import "forge-std/StdJson.sol";
 
 import {Ethernaut} from "src/Ethernaut.sol";
 import {Statistics} from "src/metrics/Statistics.sol";

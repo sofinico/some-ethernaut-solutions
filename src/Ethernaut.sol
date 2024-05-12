@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "openzeppelin-contracts-08/access/Ownable.sol";
 import "./levels/base/Level.sol";
 
 interface IStatistics {
