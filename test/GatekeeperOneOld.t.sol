@@ -16,11 +16,11 @@ bytes8 constant GATEKEY = 0x0023caca00001f38;
 
 contract SolutionTest is Test {
     GatekeeperOne gk;
-    Solution sol;
+    GatekeeperOneSolution sol;
 
     function setUp() public {
         gk = new GatekeeperOne();
-        sol = new Solution(address(gk));
+        sol = new GatekeeperOneSolution(address(gk));
     }
 
     function testSolution() public {

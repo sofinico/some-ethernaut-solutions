@@ -13,14 +13,14 @@ import {Ethernaut} from "src/Ethernaut.sol";
 
 contract SolutionTest is Test {
     GatekeeperTwo gk;
-    Solution sol;
+    GatekeeperTwoSolution sol;
 
     function setUp() public {
         gk = new GatekeeperTwo();
     }
 
     function testSolution() public {
-        sol = new Solution(address(gk));
+        sol = new GatekeeperTwoSolution(address(gk));
 
         // if here, deployment went successfull
         assertTrue(true);
