@@ -15,4 +15,3 @@ contract NaughtCoinAttack {
         uint playerBalance = token.balanceOf(msg.sender);
         require(token.transferFrom(msg.sender, address(this), playerBalance), "Transfer failed");
     }
-}
