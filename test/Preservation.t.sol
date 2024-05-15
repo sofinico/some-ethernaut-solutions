@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "forge-std/Test.sol";
+import {Test} from "forge-std/Test.sol";
 import {Utils} from "./utils/Utils.sol";
 
 import {Preservation, LibraryContract} from "../src/levels/Preservation.sol";
