@@ -1,5 +1,5 @@
 import { TransactionDescription, TransactionReceipt, TransactionResponse, ethers } from "ethers";
-import solutionABI from "./utils/GatekeeperOneExploitABI.json";
+import solutionABI from "./utils/GatekeeperOneSolutionABI-a553138ec8d0619eaf4c65eec457bceb08aa8460.json";
 
 const provider = new ethers.JsonRpcProvider("https://rpc.sepolia.org");
 
@@ -31,10 +31,19 @@ async function getTransactionReceipt(txHash: string): Promise<TransactionReceipt
  */
 
 async function getConsumedGas() {
-    // transaction hash of me calling makeEntrant() on first instance (no event)
+    /**
+     * transaction hash of me calling makeEntrant() on first instance (no event)
+     * contract solution version as in commit 659915429e7a1d7ec5d84d74633c606956c5ffc5
+     */
+
     // const txHash = "0xa511f48e8435ae21414f491fdf36ea73efc387a04fcb93706c0cb9c7b014660c";
     
-    // transaction hash of me calling makeEntrant() on second instance (event emitted)
+    /**
+     * transaction hash of me calling makeEntrant() on second instance (event emitted)
+     * solution on Sepolia was with version of the contract as in commit a553138ec8d0619eaf4c65eec457bceb08aa8460 
+     * with ForwardedGas() event instead of GasOffset() as it is now.
+     */
+
     const txHash = "0x4c50f2e5aa9a8afbfe7dd128ccb80543043ee6bdbd0ab98a59593bd1447b3690";
 
     const ISolution = new ethers.Interface(solutionABI);
